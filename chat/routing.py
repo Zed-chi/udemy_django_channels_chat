@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from .consumers import ChatConsumer
+from .consumers import ChatConsumer, AsyncChatConsumer, BaseSyncConsumer
 
 urls = [
-    url(r'^ws/chat/$', ChatConsumer),
+    url(r'^ws/chat/$', BaseSyncConsumer),
 ]
